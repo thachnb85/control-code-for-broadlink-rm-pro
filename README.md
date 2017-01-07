@@ -19,4 +19,5 @@ print 'Learned code in byte array'
 bytearray(devices[0].check_data())
 
 ```
-Then share your code!
+Then share your packet.
+In this repo i shared my Samsung TV's IR packet code, in byte array.
