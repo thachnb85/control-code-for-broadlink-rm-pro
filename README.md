@@ -1,7 +1,6 @@
-# Broadlink_RM_Pro_ControlCode
-### List of code which is ready to use in in python broadlink
+### List of packet which is ready to use in in python-broadlink to control devices via Broadlink RM Pro IR/RF.
 
-### How to get that code
+### How to get that packet
 - You should have a Broadlink device
 - Using great python module broadlink (from mjg58)
 
@@ -35,4 +34,6 @@ devices[0].send_data(str(samsung_tv_power))
 Thanks to mjg59 for great python-broadlink bridge
 https://github.com/mjg59/python-broadlink
 
+### License
+MIT
 
