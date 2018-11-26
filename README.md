@@ -21,6 +21,11 @@ bytearray(devices[0].check_data())
 Then share your packet.
 In this repo i shared my Samsung TV's IR packet code, in byte array.
 
+### Built-in Temperature sensor
+```python
+devices[0].check_temperature()
+```
+
 ### Share your packet
 Example here 
 
