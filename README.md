@@ -7,6 +7,9 @@
 ### Learning code
 ```python
 import broadlink
+import binascii
+import struct
+
 devices = broadlink.discover(timeout=10)
 print 'Authentication status {}'.format (devices[0].auth())
 
@@ -15,12 +18,14 @@ print 'Start learning'
 devices[0].enter_learning()
 
 print 'Learned code in byte array'
-bytearray(devices[0].check_data())
+binstr = bytearray(devices[0].check_data())
 
+# Make code ready for Home Asisstant
+encoded_base64 = binascii.b2a_base64(binstr)
+
+print ('Home Assistant Code: ' + encoded_base64 + '===')
+# it can be used directly in yaml of Home Assistant.
 ```
-Then share your packet.
-In this repo i shared my Samsung TV's IR packet code, in byte array.
-
 ### Built-in Temperature sensor
 ```python
 devices[0].check_temperature()
