@@ -18,13 +18,9 @@ print 'Start learning'
 devices[0].enter_learning()
 
 print 'Learned code in byte array'
-binstr = bytearray(devices[0].check_data())
-
 # Make code ready for Home Asisstant
-encoded_base64 = binascii.b2a_base64(binstr)
+binascii.b2a_base64(bytearray(devices[0].check_data()))
 
-print ('Home Assistant Code: ' + encoded_base64 + '===')
-# it can be used directly in yaml of Home Assistant.
 ```
 ### Built-in Temperature sensor
 ```python
