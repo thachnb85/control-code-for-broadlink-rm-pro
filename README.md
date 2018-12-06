@@ -13,12 +13,13 @@ import struct
 devices = broadlink.discover(timeout=10)
 print 'Authentication status {}'.format (devices[0].auth())
 
-# FOR LEARNING
-print 'Start learning'
+# Step: 1: Start Learning Mode
 devices[0].enter_learning()
+# At this point, you can see yellow led light ON on Broadlink device.
 
-print 'Learned code in byte array'
-# Make code ready for Home Asisstant
+# Step 2: Now you should press button, if Broadlnk learned code successfully, yellow light will be off.
+
+# Step 3: Make code ready for Home Asisstant
 binascii.b2a_base64(bytearray(devices[0].check_data()))
 
 ```
@@ -27,7 +28,7 @@ binascii.b2a_base64(bytearray(devices[0].check_data()))
 devices[0].check_temperature()
 ```
 
-### Share your packet
+### Send code using Broadlink
 Example here 
 
 ```python
